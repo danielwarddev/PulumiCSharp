@@ -3,6 +3,8 @@ using Pulumi.AzureNative.Resources;
 using Pulumi.AzureNative.Storage;
 using Pulumi.AzureNative.Storage.Inputs;
 using System.Collections.Generic;
+using Pulumi.AzureNative.Web;
+using Pulumi.AzureNative.Web.Inputs;
 
 return await Pulumi.Deployment.RunAsync(() =>
 {
@@ -18,6 +20,19 @@ return await Pulumi.Deployment.RunAsync(() =>
             Name = SkuName.Standard_LRS
         },
         Kind = Kind.StorageV2
+    });
+    
+    var appServicePlan = new AppServicePlan("appServicePlan", new AppServicePlanArgs
+    {
+        ResourceGroupName = resourceGroup.Name,
+        Kind = "Linux",
+        Sku = new SkuDescriptionArgs
+        {
+            Name = "Y1",
+            Tier = "Dynamic"
+        },
+        Reserved = true,
+        Location = "WestUS"
     });
 
     var storageAccountKeys = ListStorageAccountKeys.Invoke(new ListStorageAccountKeysInvokeArgs
