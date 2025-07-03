@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulumiCSharp.Infrastructure", "PulumiCSharp.Infrastructure\PulumiCSharp.Infrastructure.csproj", "{5431EFC6-F91B-4C64-9568-A7FE5CFCF61B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulumiCSharp.ConsoleApp", "PulumiCSharp.ConsoleApp\PulumiCSharp.ConsoleApp.csproj", "{34388677-6A46-4BF3-8979-B55C71A18F55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{5431EFC6-F91B-4C64-9568-A7FE5CFCF61B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5431EFC6-F91B-4C64-9568-A7FE5CFCF61B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5431EFC6-F91B-4C64-9568-A7FE5CFCF61B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34388677-6A46-4BF3-8979-B55C71A18F55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34388677-6A46-4BF3-8979-B55C71A18F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34388677-6A46-4BF3-8979-B55C71A18F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34388677-6A46-4BF3-8979-B55C71A18F55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
