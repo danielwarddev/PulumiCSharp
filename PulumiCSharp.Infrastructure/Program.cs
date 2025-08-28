@@ -9,14 +9,8 @@ using Kind = Pulumi.AzureNative.Storage.Kind;
 using StorageAccountArgs = Pulumi.AzureNative.Storage.StorageAccountArgs;
 using PulumiCSharp.Infrastructure;
 
-return await Pulumi.Deployment.RunAsync(async () =>
+return await Pulumi.Deployment.RunAsync(() =>
 {
-    // To debug the infra project, uncomment this code, run pulumi up, then attach to the process in your IDE
-    /*while (!Debugger.IsAttached)
-    {
-        await System.Threading.Tasks.Task.Delay(1000);
-    }*/
-
     var resourceGroup = new ResourceGroup("resourceGroup");
     
     var storageAccount = new StorageAccount("sa", new StorageAccountArgs
@@ -39,11 +33,12 @@ return await Pulumi.Deployment.RunAsync(async () =>
         }
     });
 
-    publishCommand.Apply(x =>
+    // Uncomment to get the typical non-error logs from dotnet publish
+    /*publishCommand.Apply(x =>
     {
         Console.WriteLine(x.Stdout);
         return x; // We don't care about this, but Apply<T>() forces you to return a T
-    });
+    });*/
 
     var functionApp1 = new AzureFunctionApp("cool-function-1", new()
     {
