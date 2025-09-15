@@ -1,5 +1,4 @@
-﻿using System;
-using Pulumi.AzureNative.Resources;
+﻿using Pulumi.AzureNative.Resources;
 using Pulumi.AzureNative.Storage;
 using Pulumi.AzureNative.Storage.Inputs;
 using System.Collections.Generic;
@@ -11,6 +10,8 @@ using PulumiCSharp.Infrastructure;
 
 return await Pulumi.Deployment.RunAsync(() =>
 {
+    var azureConfig = new Pulumi.Config("azure-native");
+
     var resourceGroup = new ResourceGroup("resourceGroup");
     
     var storageAccount = new StorageAccount("sa", new StorageAccountArgs
@@ -40,8 +41,11 @@ return await Pulumi.Deployment.RunAsync(() =>
         return x; // We don't care about this, but Apply<T>() forces you to return a T
     });*/
 
+    var location = azureConfig.Require("location");
+
     var functionApp1 = new AzureFunctionApp("cool-function-1", new()
     {
+        Region = azureConfig.Require("location"),
         ResourceGroupName = resourceGroup.Name,
         StorageAccountName = storageAccount.Name,
         FunctionName = "MyCoolFunction",
@@ -51,6 +55,7 @@ return await Pulumi.Deployment.RunAsync(() =>
 
     var functionApp2 = new AzureFunctionApp("cool-function-2", new()
     {
+        Region = azureConfig.Require("location"),
         ResourceGroupName = resourceGroup.Name,
         StorageAccountName = storageAccount.Name,
         FunctionName = "MyCoolFunction",
