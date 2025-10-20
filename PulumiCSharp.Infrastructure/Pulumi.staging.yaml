@@ -1,4 +1,6 @@
 config:
-  azure-native:location: EastUS2
+  azure-native:location: CentralUS
+  azure-native:subscriptionId: 22222222-2222-2222-2222-222222222222
   pulumi:tags:
     pulumi:template: azure-csharp
+  PulumiCSharp.Infrastructure:function-count: 2

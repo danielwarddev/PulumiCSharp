@@ -27,7 +27,6 @@ public class DotNetVersion : ResourceArgs
 
 public class AzureFunctionAppArgs : ResourceArgs
 {
-    [Input("region", true)] public required Input<string> Region { get; set; }
     [Input("resourceGroupName", true)] public required Input<string> ResourceGroupName { get; set; }
     [Input("storageAccountName", true)] public required Input<string> StorageAccountName { get; set; }
     [Input("functionName", true)] public required Input<string> FunctionName { get; set; }
@@ -112,8 +111,7 @@ public class AzureFunctionApp : ComponentResource
                 Name = "Y1",
                 Tier = "Dynamic"
             },
-            Reserved = true,
-            Location = args.Region
+            Reserved = true
         },
         new() { Parent = this });
 
