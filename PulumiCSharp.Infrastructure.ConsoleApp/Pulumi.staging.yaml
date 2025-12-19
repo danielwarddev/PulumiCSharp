@@ -1,0 +1,4 @@
+config:
+  azure-native:location: CentralUS
+  azure-native:subscriptionId: 11111111-1111-1111-1111-111111111111
+  PulumiCSharp.Infrastructure:function-count: 2

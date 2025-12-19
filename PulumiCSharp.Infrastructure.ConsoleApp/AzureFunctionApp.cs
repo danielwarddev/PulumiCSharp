@@ -1,12 +1,12 @@
 ﻿using Pulumi;
-using Pulumi.AzureNative.Insights;
+using Pulumi.AzureNative.ApplicationInsights;
 using Pulumi.AzureNative.OperationalInsights;
 using Pulumi.AzureNative.OperationalInsights.Inputs;
 using Pulumi.AzureNative.Storage;
 using Pulumi.AzureNative.Web;
 using Pulumi.AzureNative.Web.Inputs;
 
-namespace PulumiCSharp.Infrastructure;
+namespace PulumiCSharp.Infrastructure.ConsoleApp;
 
 public class DotNetVersion : ResourceArgs
 {

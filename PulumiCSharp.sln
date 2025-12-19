@@ -1,8 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11222.16 d18.3
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulumiCSharp.Infrastructure", "PulumiCSharp.Infrastructure\PulumiCSharp.Infrastructure.csproj", "{5431EFC6-F91B-4C64-9568-A7FE5CFCF61B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulumiCSharp.ConsoleApp", "PulumiCSharp.ConsoleApp\PulumiCSharp.ConsoleApp.csproj", "{34388677-6A46-4BF3-8979-B55C71A18F55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulumiCSharp.Infrastructure.ConsoleApp", "PulumiCSharp.Infrastructure.ConsoleApp\PulumiCSharp.Infrastructure.ConsoleApp.csproj", "{D7EA386C-4826-23F5-6B23-464730FD1F29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +23,15 @@ Global
 		{34388677-6A46-4BF3-8979-B55C71A18F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34388677-6A46-4BF3-8979-B55C71A18F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34388677-6A46-4BF3-8979-B55C71A18F55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7EA386C-4826-23F5-6B23-464730FD1F29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7EA386C-4826-23F5-6B23-464730FD1F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7EA386C-4826-23F5-6B23-464730FD1F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7EA386C-4826-23F5-6B23-464730FD1F29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79B7C4B9-0ABF-4364-8A38-3F9572C5963B}
 	EndGlobalSection
 EndGlobal

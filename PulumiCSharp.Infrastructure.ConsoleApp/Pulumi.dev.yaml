@@ -1,0 +1,7 @@
+config:
+  azure-native:location: WestUS
+  azure-native:subscriptionId: 11111111-1111-1111-1111-111111111111
+  PulumiCSharp.Infrastructure.ConsoleApp:foundationOrgName: danielwarddev
+  PulumiCSharp.Infrastructure.ConsoleApp:foundationProjectName: PulumiCSharp.Infrastructure
+  PulumiCSharp.Infrastructure.ConsoleApp:foundationStackName: dev
+  PulumiCSharp.Infrastructure.ConsoleApp:function-count: 1
